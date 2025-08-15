@@ -1,40 +1,37 @@
-$bg: rgb(247, 137, 35);
-$text: #fff;
-// Без цього колонки чомусь не стають правильно
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-// ~~~~~~~~~~~~~~~~container~~~~~~~~~~~~~~~~
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 10px;
 }
 
-// ~~~~~~~~~~~~~~~~header~~~~~~~~~~~~~~~~
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }
 
 .logo {
-  color: $bg;
+  color: rgb(247, 137, 35);
   font-weight: 700;
   font-size: 30px;
 }
 
 .nav {
-  background: $bg;
-  color: $text;
+  background: rgb(247, 137, 35);
+  color: #fff;
   padding: 20px;
   text-align: center;
   flex-grow: 1;
 }
-// ~~~~~~~~~~~~~~~~main and aside~~~~~~~~~~~~~~~~
+
 .main__container {
   display: flex;
   gap: 20px;
@@ -42,8 +39,8 @@ $text: #fff;
 }
 
 .main__content {
-  background: $bg;
-  color: $text;
+  background: rgb(247, 137, 35);
+  color: #fff;
   padding: 100px 20px;
   flex-grow: 2;
   display: flex;
@@ -51,14 +48,14 @@ $text: #fff;
 }
 
 .main__aside {
-  background: $bg;
-  color: $text;
+  background: rgb(247, 137, 35);
+  color: #fff;
   padding: 100px 20px;
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
-// ~~~~~~~~~~~~~~~~columns~~~~~~~~~~~~~~~~
+
 .list {
   display: flex;
   flex-wrap: wrap;
@@ -69,25 +66,22 @@ $text: #fff;
 
 .list__item {
   flex-basis: calc((100% - 40px) / 3);
-  background: $bg;
-  color: $text;
+  background: rgb(247, 137, 35);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 150px;
 }
 
-// ~~~~~~~~~~~~~~~~columns~~~~~~~~~~~~~~~~
 @media (max-width: 1024px) {
   .logo {
-    color: $bg;
+    color: rgb(247, 137, 35);
     font-weight: 800;
-    // font-size: 40px;
   }
   .main__container {
     flex-direction: column;
   }
-
   .main__content {
     padding: 100px 20px;
   }
@@ -98,20 +92,17 @@ $text: #fff;
     flex-basis: calc((100% - 40px) / 2);
   }
 }
-
 @media (max-width: 480px) {
   .logo {
     font-size: 40px;
     font-weight: 700;
   }
-
   .nav {
     max-width: 100px;
   }
   .main__container {
     flex-direction: column;
   }
-
   .main__content {
     padding: 150px 20px;
   }
