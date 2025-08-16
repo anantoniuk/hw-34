@@ -1,14 +1,10 @@
+@import "./global/reset";
 $bg: rgb(247, 137, 35);
 $text: #fff;
-// Без цього колонки чомусь не стають правильно
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 // ~~~~~~~~~~~~~~~~container~~~~~~~~~~~~~~~~
 .container {
   max-width: 1200px;
+  min-width: 320px;
   margin: 0 auto;
   padding: 10px;
 }
@@ -26,7 +22,9 @@ $text: #fff;
   font-weight: 700;
   font-size: 30px;
 }
-
+.nav__btn {
+  display: none;
+}
 .nav {
   background: $bg;
   color: $text;
@@ -100,13 +98,38 @@ $text: #fff;
 }
 
 @media (max-width: 480px) {
+  .header__container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 0 0;
+  }
+  .header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px 10px;
+  }
   .logo {
     font-size: 40px;
     font-weight: 700;
   }
-
+  .nav__btn {
+    display: block;
+    padding: 10px;
+    background-color: $bg;
+  }
+  .btn__icon {
+    fill: $text;
+    width: 40px;
+    height: 40px;
+  }
   .nav {
-    max-width: 100px;
+    background: $bg;
+    color: $text;
+    padding: 40px;
+    text-align: center;
+    max-width: 100%;
   }
   .main__container {
     flex-direction: column;
@@ -119,7 +142,7 @@ $text: #fff;
     padding: 80px 20px;
   }
   .list__item {
-    flex-basis: calc((100% - 0px) / 1);
+    flex-basis: 100%;
     min-height: 100px;
   }
 }
